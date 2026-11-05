@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мої завдання</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="box wide">
+    <div class="top">
+      <h1 id="welcome">Вітаємо!</h1>
+      <button id="logoutBtn" class="alt">Вийти</button>
+    </div>
+    <p id="message" class="message"></p>
+
+    <form id="taskForm">
+      <input type="hidden" id="taskId">
+      <input type="text" id="title" placeholder="Нове завдання" required>
+      <select id="priority">
+        <option value="низька">низька</option>
+        <option value="середня" selected>середня</option>
+        <option value="висока">висока</option>
+      </select>
+      <button id="saveBtn">Додати</button>
+    </form>
+
+    <div class="filters">
+      <button data-filter="all" class="active">Усі</button>
+      <button data-filter="done">Виконані</button>
+      <button data-filter="todo">Невиконані</button>
+      <button data-filter="today">Сьогодні</button>
+    </div>
+
+    <ul id="list"></ul>
+
+    <div class="stats">
+      <canvas id="chart"></canvas>
+      <p id="percent"></p>
+    </div>
+  </div>
+  <p class="footer">Лабораторна №10 — Залевський Андрій</p>
+
+  <script src="/lib/chart.umd.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

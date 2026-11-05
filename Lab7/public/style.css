@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f6;
+}
+
+.box {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+h1 { text-align: center; }
+
+form { display: flex; gap: 8px; margin-bottom: 10px; }
+input { padding: 8px; flex: 1; }
+#search { width: 100%; box-sizing: border-box; margin-bottom: 10px; }
+
+button { padding: 8px 12px; cursor: pointer; }
+
+ul { list-style: none; padding: 0; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}

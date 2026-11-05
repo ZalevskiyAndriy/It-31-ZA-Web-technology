@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User API</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Random User API</h1>
+
+        <p class="description">
+            Отримання випадкових користувачів за допомогою Fetch та Axios
+        </p>
+
+        <div class="buttons">
+            <button id="btnFetch">
+                Отримати 1 користувача (Fetch)
+            </button>
+
+            <button id="btnAxios">
+                Отримати 10 користувачів (Axios)
+            </button>
+
+            <button id="btnRefresh">
+                Оновити дані
+            </button>
+        </div>
+
+        <div id="status"></div>
+
+        <div id="result" class="users-container"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

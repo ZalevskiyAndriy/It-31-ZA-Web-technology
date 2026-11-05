@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Реєстрація</h1>
+        <p class="subtitle">Створіть новий обліковий запис</p>
+
+        <% if (errorMessages.length) { %>
+            <div class="alert error">
+                <% errorMessages.forEach(message => { %>
+                    <p><%= message %></p>
+                <% }) %>
+            </div>
+        <% } %>
+
+        <form action="/register" method="POST">
+            <label for="name">ПІБ</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                minlength="3"
+                maxlength="30"
+                value="<%= oldInput.name || '' %>"
+                required
+            >
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                value="<%= oldInput.email || '' %>"
+                required
+            >
+
+            <label for="password">Пароль</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="6"
+                required
+            >
+
+            <label for="passwordConfirm">Підтвердження пароля</label>
+            <input
+                type="password"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                minlength="6"
+                required
+            >
+
+            <button type="submit">Зареєструватися</button>
+        </form>
+
+        <p class="link-text">
+            Уже маєте акаунт?
+            <a href="/login">Увійти</a>
+        </p>
+    </main>
+</body>
+</html>

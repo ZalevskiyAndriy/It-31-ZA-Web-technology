@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Улюблені серіали</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h1>Улюблені серіали</h1>
+
+    <form id="form">
+      <input type="hidden" id="id">
+      <input type="text" id="title" placeholder="Назва" required>
+      <input type="number" id="seasons" placeholder="Сезонів" min="1" required>
+      <button id="saveBtn">Додати</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Пошук за назвою">
+
+    <ul id="list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

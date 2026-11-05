@@ -1,0 +1,62 @@
+body {
+  font-family: Verdana, sans-serif;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+}
+.box.wide { max-width: 650px; }
+.center { text-align: center; }
+
+h1 { color: #4834d4; margin-top: 0; }
+
+form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
+#taskForm { flex-direction: row; }
+
+input, select { padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+#title { flex: 1; }
+
+button, .btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #6c5ce7;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+button.alt, .btn.alt { background: #b2bec3; color: #222; }
+button.del { background: #d63031; }
+
+.top { display: flex; justify-content: space-between; align-items: center; }
+.filters { display: flex; gap: 6px; margin-bottom: 10px; }
+.filters button { background: #dfe6e9; color: #222; }
+.filters button.active { background: #6c5ce7; color: white; }
+
+ul { list-style: none; padding: 0; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+li.done .text { text-decoration: line-through; color: #999; }
+li small { color: #888; }
+li button { padding: 6px 8px; font-size: 12px; }
+
+.message { color: #d63031; min-height: 18px; }
+.message.ok { color: #00b894; }
+
+.stats { width: 250px; margin: 20px auto 0; text-align: center; }
+.footer { text-align: center; color: white; }

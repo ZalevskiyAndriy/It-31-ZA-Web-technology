@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Список подарунків</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #eef1f6; }
+    .box { max-width: 450px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; }
+    h1 { text-align: center; }
+    label { display: block; margin-top: 12px; }
+    input[type=text], input[type=number] { width: 100%; padding: 8px; box-sizing: border-box; }
+    .invalid { border: 1px solid red; }
+    .error { color: red; font-size: 14px; }
+    .success { background: #d9f2d9; padding: 10px; border-radius: 5px; }
+    button { margin-top: 15px; padding: 10px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Список подарунків</h1>
+
+    <% if (success) { %>
+      <p class="success">Подарунок успішно збережено!</p>
+    <% } %>
+
+    <form action="/gifts" method="POST" novalidate>
+      <label>Кому (person)
+        <input type="text" name="person" value="<%= old.person || '' %>"
+               class="<%= errors.person ? 'invalid' : '' %>">
+      </label>
+      <% if (errors.person) { %><div class="error"><%= errors.person.msg %></div><% } %>
+
+      <label>Ідея подарунка (giftIdea)
+        <input type="text" name="giftIdea" value="<%= old.giftIdea || '' %>"
+               class="<%= errors.giftIdea ? 'invalid' : '' %>">
+      </label>
+      <% if (errors.giftIdea) { %><div class="error"><%= errors.giftIdea.msg %></div><% } %>
+
+      <label>Бюджет (budget)
+        <input type="text" name="budget" value="<%= old.budget || '' %>"
+               class="<%= errors.budget ? 'invalid' : '' %>">
+      </label>
+      <% if (errors.budget) { %><div class="error"><%= errors.budget.msg %></div><% } %>
+
+      <label>Дата (dueDate)
+        <input type="text" name="dueDate" placeholder="РРРР-ММ-ДД" value="<%= old.dueDate || '' %>"
+               class="<%= errors.dueDate ? 'invalid' : '' %>">
+      </label>
+      <% if (errors.dueDate) { %><div class="error"><%= errors.dueDate.msg %></div><% } %>
+
+      <label>
+        <input type="checkbox" name="bought" <%= old.bought ? 'checked' : '' %>> Вже куплено (bought)
+      </label>
+
+      <button type="submit">Додати</button>
+    </form>
+  </div>
+</body>
+</html>

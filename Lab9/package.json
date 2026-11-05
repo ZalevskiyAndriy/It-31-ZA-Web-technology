@@ -1,0 +1,10 @@
+
+{
+  "name": "lab9-authentication",
+  "version": "1.0.0",
+  "description": "Лабораторна робота №9 — автентифікація та сесії",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

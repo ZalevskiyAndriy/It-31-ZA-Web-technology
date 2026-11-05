@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Викинути мусор",
+    "completed": false,
+    "createdAt": "2026-11-04T19:29:35.180Z",
+    "priority": "середня"
+  }
+]

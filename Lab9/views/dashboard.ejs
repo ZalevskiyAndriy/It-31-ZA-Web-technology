@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="container dashboard">
+        <h1>Особистий кабінет</h1>
+
+        <% if (successMessages.length) { %>
+            <div class="alert success">
+                <% successMessages.forEach(message => { %>
+                    <p><%= message %></p>
+                <% }) %>
+            </div>
+        <% } %>
+
+        <div class="welcome">
+            <h2>Вітаємо, <%= user.name %>!</h2>
+            <p>Ви успішно увійшли в систему.</p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+        </div>
+
+        <a class="button-link" href="/logout">Вийти із системи</a>
+    </main>
+</body>
+</html>

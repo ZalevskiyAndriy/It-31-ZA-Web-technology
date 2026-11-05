@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Мій список завдань</h1>
+
+        <form id="taskForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Назва завдання"
+                required
+            >
+
+            <textarea
+                id="description"
+                placeholder="Опис завдання"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Додати завдання
+            </button>
+
+        </form>
+
+        <h2>Список завдань</h2>
+
+        <div id="tasks"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "person": "Andriy",
+    "giftIdea": "Item",
+    "budget": 2000,
+    "dueDate": "2027-02-03",
+    "bought": true
+  }
+]
